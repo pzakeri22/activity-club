@@ -1,12 +1,10 @@
 * {
     box-sizing: border-box;
     /* outline: 1px solid red;  */
-  }
-
-* { 
     margin: 0; 
     padding: 0; 
-  }
+}
+
 
 body {
   font-family: 'Nunito Sans', sans-serif;
@@ -29,6 +27,19 @@ body {
   background-color:rgb(255, 255, 255);
 }
 
+header {
+  grid-area: 1 / 1 / 2 / 13;
+  z-index: 10;
+  align-items: center;
+  font-size: 1.25rem;
+  color: black;
+  font-weight: bold;
+  display: flex;
+  height: 4rem;   
+  justify-content: space-between;
+}
+
+
 .hero {
   /* grid-area: 1 / 1 / 2 / 13; */
   grid-area: 1 / 1 / 2 / 13;
@@ -41,20 +52,9 @@ body {
   filter: opacity(0.95); 
   display: flex;
   justify-content: center;
-  align-items: center;
+  position: relative;
 }
 
-header {
-  grid-area: 1 / 1 / 2 / 13;
-  z-index: 10;
-  align-items: center;
-  font-size: 1.25rem;
-  color: black;
-  font-weight: bold;
-  display: flex;
-  height: 4rem;   
-  justify-content: space-between;
-}
 
 .logo {
   width: 8rem;
@@ -86,7 +86,9 @@ header .burger {
   padding: 0.5rem;
   text-align: center;
   letter-spacing: 1px;
-  margin-top: -36rem;        
+  position: absolute;
+  top: 15%;
+  max-width: 80%;
 }
 
 
@@ -114,10 +116,6 @@ h1 {
 
   }
 
-  .title {
-    position: relative;
-    top: 5rem;
-  }
 }
 
 .trips-title {
